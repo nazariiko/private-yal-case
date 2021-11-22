@@ -5,9 +5,7 @@ import {
 } from '../types/activeEmployees';
 
 const initialState: ActiveEmployeesState = {
-  activeEmployees: JSON.parse(localStorage.getItem('active-employees') as string)
-    ? JSON.parse(localStorage.getItem('active-employees') as string)
-    : [],
+  activeEmployees: JSON.parse(localStorage.getItem('active-employees') as string) || [],
 };
 
 export const activeEmployeesReducer = (
